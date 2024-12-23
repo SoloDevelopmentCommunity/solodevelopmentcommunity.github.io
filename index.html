@@ -5,49 +5,62 @@
   <meta name="description" content="SoloDevelopment - Game Dev Community" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SoloDevelopment - Home</title>
-
-  <!-- Google Font: 'Press Start 2P' for a retro vibe, plus a clean backup -->
+  
+  <!-- Google Font: 'Inter' for a clean, modern look -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
     rel="stylesheet"
   />
 
   <style>
-    /* Basic Reset */
+    /* Colors */
+    :root {
+      --bg-color: #282328;      /* background */
+      --text-color: #a3a29a;    /* main text */
+      --link-color: #dd4a4a;    /* links & button backgrounds */
+      --header-foot-bg: #1f1f1f; /* optional darker shade for header/footer if desired */
+    }
+
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body & Font Setup */
+    /* Body & General Text */
     body {
       font-family: 'Inter', sans-serif;
-      background: #121212; /* Dark background for a modern, gamey feel */
-      color: #eeeeee;      /* Light text */
+      background: var(--bg-color);
+      color: var(--text-color);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-    /* Header */
-    header {
-      background: #1f1f1f;
-      padding: 1rem;
-      text-align: center;
-    }
-    header h2 {
-      font-family: 'Press Start 2P', sans-serif; /* Retro vibe for the logo/text */
-      font-size: 1.5rem;
-      color: #ffcc00; /* A bright accent color */
-      letter-spacing: 1px;
+    a {
+      color: #ffffff; /* We'll make link text white for contrast */
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
     }
 
-    /* Navigation */
-    nav {
-      margin-top: 0.75rem;
+    a:hover {
+      opacity: 0.9;
     }
+
+    /* Header */
+    header {
+      padding: 1rem;
+      text-align: center;
+      background: #1f1f1f; /* Slightly darker than main background (optional) */
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -55,112 +68,87 @@
       gap: 1rem;
     }
     nav a {
-      text-decoration: none;
-      color: #ffffff;
-      background: #0070f3; /* Blue accent for links */
+      background: var(--link-color);
       padding: 0.5rem 1rem;
       border-radius: 4px;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
-    nav a:hover {
-      background: #005bbd;
     }
 
     /* Main Content */
     main {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      max-width: 900px;
       width: 100%;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
 
     .hero {
       text-align: center;
-      margin-bottom: 2rem;
     }
-    .hero h1 {
-      font-family: 'Press Start 2P', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #ffcc00; /* Same accent from header */
+    .hero h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
     .hero p {
       font-size: 1rem;
+      margin-bottom: 1.5rem;
       line-height: 1.5;
-      color: #cccccc;
-      margin-bottom: 1rem;
+      color: var(--text-color);
     }
 
-    .hero .links {
-      display: inline-flex;
+    .hero-links {
+      display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
-    .hero .links a {
-      text-decoration: none;
-      color: #ffffff;
-      background: #0070f3;
+    .hero-links a {
+      background: var(--link-color);
       padding: 0.75rem 1.5rem;
       border-radius: 4px;
       font-weight: 600;
-      transition: background 0.2s ease;
-    }
-    .hero .links a:hover {
-      background: #005bbd;
     }
 
-    /* Showcase / Feature Section */
-    .showcase {
+    /* Info/Showcase Section (Optional) */
+    .info-section {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
       justify-content: center;
-      margin-bottom: 2rem;
     }
-    .showcase .box {
-      background: #1f1f1f;
-      border: 1px solid #444;
-      border-radius: 6px;
-      width: 280px;
+    .info-box {
+      background: #1f1f1f; /* optional darker box background */
+      border-radius: 4px;
+      width: 260px;
       padding: 1rem;
       text-align: center;
     }
-    .showcase .box h3 {
-      font-family: 'Press Start 2P', sans-serif;
-      font-size: 1rem;
-      color: #ffcc00;
+    .info-box h3 {
+      font-size: 1.1rem;
       margin-bottom: 0.75rem;
-    }
-    .showcase .box p {
-      font-size: 0.85rem;
-      color: #bbbbbb;
-      margin-bottom: 1rem;
-      line-height: 1.4;
-    }
-    .showcase .box a {
+      font-weight: 600;
       color: #ffffff;
-      background: #0070f3;
+    }
+    .info-box p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .info-box a {
+      background: var(--link-color);
       padding: 0.5rem 1rem;
       border-radius: 4px;
       font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-    .showcase .box a:hover {
-      background: #005bbd;
     }
 
     /* Footer */
     footer {
       background: #1f1f1f;
-      color: #aaa;
       text-align: center;
       padding: 1rem;
       font-size: 0.85rem;
@@ -168,82 +156,79 @@
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h2>SoloDevelopment.org</h2>
+    <h1>SoloDevelopment.org</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="halloffame.html">Hall of Fame</a></li>
-        <!-- If you had a local resources.html, you could link it here:
-             <li><a href="resources.html">Resources</a></li>
-        -->
+        <!-- Add more links as needed -->
       </ul>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <h1>Welcome, Solo Devs!</h1>
+      <h2>Welcome, Solo Devs!</h2>
       <p>
-        We’re a vibrant game dev community focused on solo developers.
-        Here, you’ll find resources, support, and a place to share your
-        work and challenges—all while working alone, together!
+        We’re a vibrant game dev community focused on solo developers. Join us
+        to share, learn, and grow as we tackle the challenges of making games
+        alone—together!
       </p>
-      <div class="links">
+      <div class="hero-links">
         <a href="https://discord.gg/4R5bB9nMSV" target="_blank" rel="noopener noreferrer">
-          Join our Discord
+          Discord
         </a>
-        <a href="https://reddit.com/r/SoloDevelopment" target="_blank" rel="noopener noreferrer">
-          Visit r/SoloDevelopment
+        <a href="https://www.reddit.com/r/SoloDevelopment" target="_blank" rel="noopener noreferrer">
+          Reddit
         </a>
         <a href="https://SoloDevelopment.itch.io" target="_blank" rel="noopener noreferrer">
-          Check out our Itch.io
+          Itch.io
         </a>
       </div>
     </section>
 
-    <section class="showcase">
-      <div class="box">
+    <!-- Info / Showcase Boxes -->
+    <section class="info-section">
+      <!-- Example: Marathon Jams -->
+      <div class="info-box">
         <h3>Marathon Jams</h3>
         <p>
-          Take on our multi-day coding sprints. Show off your best ideas under time pressure!
+          Test your speed and creativity in our multi-day coding sprints. Show us
+          what you can build under pressure!
         </p>
-        <a href="events.html">Learn More</a>
+        <a href="events.html">See Events</a>
       </div>
-      <div class="box">
+      <!-- Example: Hall of Fame -->
+      <div class="info-box">
         <h3>Hall of Fame</h3>
         <p>
-          Celebrate the greatest projects and devs who’ve pushed
-          boundaries while flying solo. 
+          Check out the top solo dev projects that have blown us away. Could yours be next?
         </p>
-        <a href="halloffame.html">See the Winners</a>
+        <a href="halloffame.html">Winners</a>
       </div>
-      <div class="box">
+      <!-- Example: Wiki or Resources -->
+      <div class="info-box">
         <h3>Community Wiki</h3>
         <p>
-          Explore in-depth resources, guides, and knowledge shared by fellow devs.
+          Dive into resources, guides, and dev logs curated by our members.
         </p>
         <a
           href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki"
           target="_blank"
           rel="noopener noreferrer"
         >
-          View the Wiki
+          Visit Wiki
         </a>
       </div>
-      <!-- Example if you wanted a "local" resources page too:
-      <div class="box">
-        <h3>Local Resources</h3>
-        <p>
-          Engines, frameworks, tools, and more curated by our members.
-        </p>
-        <a href="resources.html">Explore Tools</a>
-      </div>
-      -->
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>© 2024 SoloDevelopment.org — All rights reserved.</p>
   </footer>
