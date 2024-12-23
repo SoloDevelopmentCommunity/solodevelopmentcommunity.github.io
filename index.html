@@ -5,242 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoloDevelopment - Home</title>
     <meta name="description" content="A community for solo game developers to learn, share, and grow together.">
-    <style>
-        body {
-            margin: 40px auto;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #333;
-            padding: 0;
-            background: #fff;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        /* Dark mode */
-        @media (prefers-color-scheme: dark) {
-            body {
-                color: #fff;
-                background: #222;
-            }
-            .top-nav { background: #1a1a1a; border-bottom: 1px solid #333; }
-            footer { background: #1a1a1a; border-top: 1px solid #333; }
-            .feature-card { background: #2a2a2a; }
-            .hero { background: #2a2a2a; }
-        }
-
-        /* Navigation */
-        .top-nav {
-            width: 100%;
-            background: #f8f8f8;
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-        }
-
-        .nav-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .site-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        /* Main content */
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #f5f5f5;
-            border-radius: 8px;
-            padding: 4rem 2rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        /* Feature Cards */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-
-        .feature-card {
-            background: #f5f5f5;
-            border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #d35400;
-        }
-
-        /* Buttons */
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: #d35400;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-
-        .button:hover {
-            background: #e67e22;
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            width: 100%;
-            background: #f8f8f8;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h4 {
-            margin: 0 0 1rem 0;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-section li {
-            margin-bottom: 0.5rem;
-        }
-
-        .copyright {
-            max-width: 1100px;
-            margin: 2rem auto 0;
-            padding-top: 1rem;
-            border-top: 1px solid #ddd;
-            text-align: center;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .nav-content {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-            
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="nav-content">
+    <header>
+        <div class="header-content">
             <h1 class="site-title">SoloDevelopment.org</h1>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="https://discord.gg/4R5bB9nMSV">Discord</a>
-                <a href="halloffame.html">Hall of Fame</a>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="https://discord.gg/4R5bB9nMSV">Discord</a></li>
+                    <li><a href="halloffame.html">Hall of Fame</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main>
         <section class="hero">
-            <h2>Welcome, Solo Devs!</h2>
-            <p>Join our vibrant community of independent game developers. Share, learn, and grow as we tackle the challenges of making games alone—together!</p>
-            <div class="button-group">
-                <a href="https://discord.gg/4R5bB9nMSV" class="button">Join Discord</a>
-                <a href="https://www.reddit.com/r/solodevelopment" class="button">Join Subreddit</a>
+            <div class="hero-content">
+                <h2>Welcome, Solo Devs!</h2>
+                <p>Join our vibrant community of independent game developers. Share, learn, and grow as we tackle the challenges of making games alone—together!</p>
+                <div class="button-group">
+                    <a href="https://discord.gg/4R5bB9nMSV" class="button">Join Discord</a>
+                    <a href="https://www.reddit.com/r/solodevelopment" class="button">Join Subreddit</a>
+                </div>
             </div>
         </section>
 
         <section class="features">
-            <div class="feature-card">
-                <h3>Marathon Jams</h3>
-                <p>Test your speed and creativity in our multi-day coding sprints. Show us what you can build under pressure!</p>
-                <a href="events.html" class="button">View Events</a>
-            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Marathon Jams</h3>
+                    <p>Test your speed and creativity in our multi-day coding sprints. Show us what you can build under pressure!</p>
+                    <a href="events.html" class="button">View Events</a>
+                </div>
 
-            <div class="feature-card">
-                <h3>Hall of Fame</h3>
-                <p>Check out the top solo dev projects that have blown us away. Could yours be next?</p>
-                <a href="halloffame.html" class="button">See Winners</a>
-            </div>
+                <div class="card">
+                    <h3>Hall of Fame</h3>
+                    <p>Check out the top solo dev projects that have blown us away. Could yours be next?</p>
+                    <a href="halloffame.html" class="button">See Winners</a>
+                </div>
 
-            <div class="feature-card">
-                <h3>Community Wiki</h3>
-                <p>Dive into resources, guides, and dev logs curated by our passionate community members.</p>
-                <a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki" class="button">Browse Wiki</a>
+                <div class="card">
+                    <h3>Community Wiki</h3>
+                    <p>Dive into resources, guides, and dev logs curated by our passionate community members.</p>
+                    <a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki" class="button">Browse Wiki</a>
+                </div>
             </div>
         </section>
     </main>

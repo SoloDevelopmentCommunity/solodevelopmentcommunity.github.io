@@ -3,138 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoloDevelopment - Just Make Games</title>
-    <style>
-        body {
-            margin: 40px auto;
-            max-width: 650px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #333;
-            padding: 0 10px;
-            background: #fff;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        /* Dark mode because your eyes fucking matter */
-        @media (prefers-color-scheme: dark) {
-            body {
-                color: #fff;
-                background: #222;
-            }
-            a { color: #9f9fff; }
-            a:visited { color: #d0a0ff; }
-        }
-
-        h1, h2, h3 { line-height: 1.2 }
-        
-        /* Some breathing room */
-        section { margin: 2em 0; }
-        
-        /* Don't make links look like shit */
-        a { color: #07a; }
-        a:visited { color: #941352; }
-        
-        /* Navigation that doesn't suck */
-        nav {
-            margin: 1em 0;
-            padding: 1em 0;
-            border-bottom: 1px solid #ddd;
-            border-top: 1px solid #ddd;
-        }
-        
-        nav a {
-            margin-right: 1em;
-        }
-        
-        /* Tables that are actually readable */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 1em 0;
-        }
-        
-        th, td {
-            padding: 0.5em;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        /* Code blocks that don't hurt your eyes */
-        code {
-            background: #f4f4f4;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-        }
-
-        /* For dark mode */
-        @media (prefers-color-scheme: dark) {
-            code { background: #333; }
-            nav { border-color: #444; }
-            th, td { border-color: #444; }
-        }
-    </style>
+    <title>SoloDevelopment - Hall of Fame</title>
+    <meta name="description" content="Celebrating outstanding solo developer projects">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>SoloDevelopment.org</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="halloffame.html">Hall of Fame</a>
-        </nav>
+        <div class="header-content">
+            <h1 class="site-title">SoloDevelopment.org</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="https://discord.gg/4R5bB9nMSV">Discord</a></li>
+                    <li><a href="halloffame.html">Hall of Fame</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>Why the fuck should you join us?</h2>
-            <p>Because making games alone is hard enough without having to figure everything out by yourself. We're a community of solo devs who:</p>
-            <ul>
-                <li>Actually make games instead of just talking about making them</li>
-                <li>Help each other solve real development problems</li>
-                <li>Run game jams that don't require you to crunch for a week</li>
-            </ul>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>🏅 Hall of Fame 🏅</h2>
+                <p>Here we celebrate the amazing solo dev projects that have stood out in our community!</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Monthly Marathon Jams</h2>
-            <p>No bullshit, just coding. Our monthly jams give you:</p>
-            <ul>
-                <li>A whole month to work at your own pace</li>
-                <li>Simple themes that don't restrict creativity</li>
-                <li>A supportive community that actually plays your games</li>
-            </ul>
-            <p><a href="events.html">Check out our current jam →</a></p>
-        </section>
+        <section class="features">
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>SoloDev Game Jam 5</h3>
+                    <p>Winners:</p>
+                    <ul>
+                        <li><a href="https://drahmen.itch.io/guardian-of-the-grave" target="_blank">Guardian of the Grave</a> by @drahmen</li>
+                        <li><a href="https://emceetheguy.itch.io/hanktheimp" target="_blank">Hank The Imp</a> by @Emcee</li>
+                        <li><a href="https://log64.itch.io/maybel-in-the-hazy-hotel" target="_blank">Maybel in the Hazy Hotel</a> by @log64</li>
+                    </ul>
+                </div>
 
-        <section>
-            <h2>Hall of Fame</h2>
-            <p>See what solo devs can actually accomplish. No teams, no outsourcing, just pure dedication:</p>
-            <table>
-                <tr>
-                    <td>🏆 Latest Winner</td>
-                    <td><a href="https://drahmen.itch.io/guardian-of-the-grave">Guardian of the Grave</a> by @drahmen</td>
-                </tr>
-                <tr>
-                    <td>🎮 Community Pick</td>
-                    <td><a href="https://blackvoidmedia.itch.io/out-here-alone">Out Here Alone</a> by @blackvoidtytan</td>
-                </tr>
-            </table>
-        </section>
+                <div class="card">
+                    <h3>SoloDev Game Jam 4</h3>
+                    <p>Winners:</p>
+                    <ul>
+                        <li><a href="https://blackvoidmedia.itch.io/mutual-assured-destruction-simulator" target="_blank">Mutual Assured Destruction Simulator</a> by @blackvoidtytan</li>
+                        <li><a href="https://gripgrap.itch.io/dodge-the-question" target="_blank">Dodge the Question</a> by @gripgrap</li>
+                        <li><a href="https://yikag.itch.io/six-rolls-six" target="_blank">Six Rolls Six</a> by @yikag</li>
+                    </ul>
+                </div>
 
-        <section>
-            <h2>Join the fucking community</h2>
-            <p>No signup forms, no newsletters, just real places to talk about game dev:</p>
-            <ul>
-                <li><a href="https://discord.gg/4R5bB9nMSV">Discord</a> - Daily discussion & help</li>
-                <li><a href="https://www.reddit.com/r/solodevelopment">Reddit</a> - Share your progress</li>
-                <li><a href="https://solodevelopment.itch.io">Itch.io</a> - Play & rate games</li>
-            </ul>
+                <div class="card">
+                    <h3>Marathon Winners</h3>
+                    <p>Our long-format champions:</p>
+                    <ul>
+                        <li><a href="https://blackvoidmedia.itch.io/out-here-alone" target="_blank">Out Here Alone</a> by @blackvoidtytan</li>
+                        <li><a href="https://fernandolv3.itch.io/scavengersfromplanetx" target="_blank">Scavengers from Planet X</a> by @fernandolv3</li>
+                        <li><a href="https://razzie-dev.itch.io/df-fbla" target="_blank">DF FBLA</a> by @lonelylily</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 SoloDevelopment.org — Just make some fucking games already.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="https://discord.gg/4R5bB9nMSV">Discord Server</a></li>
+                    <li><a href="https://www.reddit.com/r/solodevelopment">Reddit</a></li>
+                    <li><a href="https://solodevelopment.itch.io">Itch.io</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="events.html">Game Jams</a></li>
+                    <li><a href="halloffame.html">Hall of Fame</a></li>
+                    <li><a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki">Wiki</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="https://practicalnpc.itch.io/">Managed by PracticalNPC</a></li>
+                    <li><a href="https://github.com/SoloDevelopmentCommunity">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 SoloDevelopment.org — Community-driven game development</p>
+        </div>
     </footer>
 </body>
 </html>
