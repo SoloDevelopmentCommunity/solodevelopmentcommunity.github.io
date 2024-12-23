@@ -2,158 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="SoloDevelopment - Game Dev Community" />
+  <meta name="description" content="SoloDevelopment - Home" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SoloDevelopment - Home</title>
-  
-  <!-- Google Font: 'Inter' for a clean, modern look -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font (Inter) -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
     rel="stylesheet"
   />
-
-  <style>
-    /* Colors */
-    :root {
-      --bg-color: #282328;      /* background */
-      --text-color: #a3a29a;    /* main text */
-      --link-color: #dd4a4a;    /* links & button backgrounds */
-      --header-foot-bg: #1f1f1f; /* optional darker shade for header/footer if desired */
-    }
-
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Body & General Text */
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    a {
-      color: #ffffff; /* We'll make link text white for contrast */
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    a:hover {
-      opacity: 0.9;
-    }
-
-    /* Header */
-    header {
-      padding: 1rem;
-      text-align: center;
-      background: #1f1f1f; /* Slightly darker than main background (optional) */
-    }
-    header h1 {
-      font-weight: 600;
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    nav a {
-      background: var(--link-color);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-    }
-
-    /* Main Content */
-    main {
-      flex: 1;
-      width: 100%;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .hero {
-      text-align: center;
-    }
-    .hero h2 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-      color: var(--text-color);
-    }
-
-    .hero-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .hero-links a {
-      background: var(--link-color);
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
-    /* Info/Showcase Section (Optional) */
-    .info-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .info-box {
-      background: #1f1f1f; /* optional darker box background */
-      border-radius: 4px;
-      width: 260px;
-      padding: 1rem;
-      text-align: center;
-    }
-    .info-box h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-      color: #ffffff;
-    }
-    .info-box p {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
-    .info-box a {
-      background: var(--link-color);
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
-    /* Footer */
-    footer {
-      background: #1f1f1f;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-    }
-  </style>
 </head>
 <body>
   <!-- Header -->
@@ -164,14 +22,13 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="halloffame.html">Hall of Fame</a></li>
-        <!-- Add more links as needed -->
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main>
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
       <h2>Welcome, Solo Devs!</h2>
       <p>
@@ -186,32 +43,32 @@
         <a href="https://www.reddit.com/r/SoloDevelopment" target="_blank" rel="noopener noreferrer">
           Reddit
         </a>
-        <a href="https://SoloDevelopment.itch.io" target="_blank" rel="noopener noreferrer">
+        <a href="https://solodevelopment.itch.io" target="_blank" rel="noopener noreferrer">
           Itch.io
         </a>
       </div>
     </section>
 
-    <!-- Info / Showcase Boxes -->
+    <!-- Info Section -->
     <section class="info-section">
-      <!-- Example: Marathon Jams -->
       <div class="info-box">
         <h3>Marathon Jams</h3>
         <p>
-          Test your speed and creativity in our multi-day coding sprints. Show us
-          what you can build under pressure!
+          Test your speed and creativity in our multi-day coding sprints. 
+          Show us what you can build under pressure!
         </p>
         <a href="events.html">See Events</a>
       </div>
-      <!-- Example: Hall of Fame -->
+
       <div class="info-box">
         <h3>Hall of Fame</h3>
         <p>
-          Check out the top solo dev projects that have blown us away. Could yours be next?
+          Check out the top solo dev projects that have blown us away.
+          Could yours be next?
         </p>
         <a href="halloffame.html">Winners</a>
       </div>
-      <!-- Example: Wiki or Resources -->
+
       <div class="info-box">
         <h3>Community Wiki</h3>
         <p>

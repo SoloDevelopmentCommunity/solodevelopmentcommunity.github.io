@@ -1,14 +1,14 @@
 /* style.css */
 
-/* Colors (using CSS variables for easy reuse) */
+/* Colors (using CSS variables) */
 :root {
-  --bg-color: #282328;     /* Main background */
-  --text-color: #a3a29a;   /* Main text */
-  --link-color: #dd4a4a;   /* Links/buttons */
-  --header-foot-bg: #1f1f1f; /* Slightly darker for header/footer panels */
+  --bg-color: #282328;       /* Site-wide background */
+  --text-color: #a3a29a;     /* Main text color */
+  --link-color: #dd4a4a;     /* Buttons and link backgrounds */
+  --header-foot-bg: #1f1f1f; /* Slightly darker for header/footer or boxes */
 }
 
-/* Reset / Global */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +26,9 @@ body {
 
 /* Links */
 a {
-  color: #ffffff; /* White text on the red link background for contrast */
+  color: #ffffff; /* White text on red button for contrast */
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+  transition: opacity 0.2s;
 }
 a:hover {
   opacity: 0.9;
@@ -40,12 +40,13 @@ header {
   padding: 1rem;
   text-align: center;
 }
-header h1, header h2 {
-  font-weight: 600;
+header h1 {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
   margin-bottom: 0.75rem;
-  color: #fff;
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -59,7 +60,7 @@ nav a {
   font-weight: 600;
 }
 
-/* Main Content Wrapper */
+/* Main Container */
 main {
   flex: 1;
   width: 100%;
@@ -68,47 +69,38 @@ main {
   padding: 0 1rem;
 }
 
-/* Sections, if you want a standard 'content' section */
-.content {
-  /* optional styling for a content area */
-  display: block;
-  margin-bottom: 2rem;
-}
-
-/* Buttons/Links in hero or info-boxes */
-.button, .hero-links a, .info-box a {
-  background: var(--link-color);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 600;
-  display: inline-block;
-}
-
-/* Simple "hero" block */
+/* Hero Section */
 .hero {
   text-align: center;
   margin-bottom: 2rem;
 }
 .hero h2 {
-  font-weight: 600;
   font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
   margin-bottom: 1rem;
-  color: #fff;
 }
 .hero p {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
   line-height: 1.5;
-  color: var(--text-color);
+  margin-bottom: 1.5rem;
 }
+
+/* Links in Hero */
 .hero-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
 }
+.hero-links a {
+  background: var(--link-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
 
-/* Info/Showcase boxes */
+/* Info/Showcase Section */
 .info-section {
   display: flex;
   flex-wrap: wrap;
@@ -126,13 +118,12 @@ main {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
 }
 .info-box p {
   font-size: 0.95rem;
   line-height: 1.4;
   margin-bottom: 1rem;
-  color: var(--text-color);
 }
 
 /* Footer */
@@ -141,5 +132,33 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.85rem;
-  color: #fff;
+  color: #ffffff;
+}
+
+/* Content sections (e.g., events, halloffame) */
+.content {
+  margin-bottom: 2rem;
+}
+
+/* Table Styling (for Hall of Fame, etc.) */
+.table-container {
+  overflow-x: auto; /* allow horizontal scroll on small screens */
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+thead th {
+  background: #3a3a3a; /* Slightly darker header row */
+  color: #ffffff;
+}
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  vertical-align: top;
+}
+tbody tr:nth-child(even) {
+  background: #1f1f1f; /* Alternate row shading */
 }
