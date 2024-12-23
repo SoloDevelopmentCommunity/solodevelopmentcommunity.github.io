@@ -1,148 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="SoloDevelopment - Events & Jams" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SoloDevelopment - Events</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts (optional) -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoloDevelopment - Events</title>
+    <style>
+        body {
+            margin: 40px auto;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #333;
+            padding: 0;
+            background: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #fff;
+                background: #222;
+            }
+            .top-nav { background: #1a1a1a; border-bottom: 1px solid #333; }
+            footer { background: #1a1a1a; border-top: 1px solid #333; }
+            .current-jam { background: #2a2a2a; }
+            .jam-list li { border-color: #333; }
+        }
+
+        /* Navigation */
+        .top-nav {
+            width: 100%;
+            background: #f8f8f8;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Main content */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Current Jam Highlight */
+        .current-jam {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .current-jam h2 {
+            margin-top: 0;
+            color: #d35400;
+        }
+
+        /* Jam Lists */
+        .jam-section {
+            margin: 3rem 0;
+        }
+
+        .jam-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .jam-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .jam-list li:last-child {
+            border-bottom: none;
+        }
+
+        .jam-list a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .jam-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            border-left: 4px solid #d35400;
+        }
+
+        .about-section h2 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background: #f8f8f8;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            margin: 0 0 1rem 0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: 2rem auto 0;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <h2>SoloDevelopment.org</h2>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="halloffame.html">Hall of Fame</a></li>
-      </ul>
+    <nav class="top-nav">
+        <div class="nav-content">
+            <h1 class="site-title">SoloDevelopment.org</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="https://discord.gg/4R5bB9nMSV">Discord</a>
+                <a href="halloffame.html">Hall of Fame</a>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <main>
-    <div class="content">
-      <!-- Current Jam -->
-      <h2>
-        Current Jam:
-        <a href="https://itch.io/jam/solodev-marathon-jam-4" target="_blank"
-          >SoloDevelopment&nbsp;Marathon Jam #4</a
-        >
-      </h2>
+    <main>
+        <div class="current-jam">
+            <h2>🎮 Current Jam</h2>
+            <p>Join our latest game development challenge:</p>
+            <h3><a href="https://itch.io/jam/solodev-marathon-jam-4" target="_blank">SoloDevelopment Marathon Jam #4</a></h3>
+        </div>
 
-      <!-- About Us -->
-      <h2>About Us - SoloDevelopment Community</h2>
-      <p><em>By SoloDevs, For SoloDevs</em></p>
-      <p>
-        Welcome to SoloDevelopment, a community built by solo developers for solo
-        developers! We provide a space where indie devs can connect, share
-        experiences, and support each other on our solo game development journeys.
-        Join our Discord:
-        <a href="https://discord.gg/4R5bB9nMSV" target="_blank"
-          >https://discord.gg/4R5bB9nMSV</a
-        >.
-      </p>
-      <p>
-        We regularly host game jams and encourage developers of all skill levels to
-        participate. Whether you're looking to collaborate, get feedback, or just
-        learn from others, this is the place for you!
-      </p>
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p><em>By SoloDevs, For SoloDevs</em></p>
+            <p>Welcome to SoloDevelopment, a community built by solo developers for solo developers! We provide a space where indie devs can connect, share experiences, and support each other on our solo game development journeys.</p>
+            <p>We regularly host game jams and encourage developers of all skill levels to participate. Whether you're looking to collaborate, get feedback, or just learn from others, this is the place for you!</p>
+        </div>
 
-      <!-- Latest Marathon Jams -->
-      <h2>Latest Marathon Jams</h2>
-      <ul>
-        <li>
-          <a
-            href="https://itch.io/jam/marathon-jam-by-solodevelopment"
-            target="_blank"
-            >Marathon Jam 1</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/marathon-jam-2022-by-solodevelopment"
-            target="_blank"
-            >Marathon Jam 2</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/marathon-jam-3-by-solodevelopment"
-            target="_blank"
-            >Marathon Jam 3</a
-          >
-        </li>
-      </ul>
+        <div class="jam-section">
+            <h2>Marathon Jams</h2>
+            <p>Take on the challenge of our month-long development marathons:</p>
+            <ul class="jam-list">
+                <li><a href="https://itch.io/jam/marathon-jam-by-solodevelopment" target="_blank">Marathon Jam 1</a> - Our first community marathon</li>
+                <li><a href="https://itch.io/jam/marathon-jam-2022-by-solodevelopment" target="_blank">Marathon Jam 2</a> - The sequel you've been waiting for</li>
+                <li><a href="https://itch.io/jam/marathon-jam-3-by-solodevelopment" target="_blank">Marathon Jam 3</a> - Bigger, better, longer</li>
+            </ul>
+        </div>
 
-      <!-- 72-hour Jams -->
-      <h2>72-hour Jams</h2>
-      <ul>
-        <li>
-          <a
-            href="https://itch.io/jam/winter-jam-by-solodevelopment"
-            target="_blank"
-            >Winter Jam</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/solodevelopment-game-jam"
-            target="_blank"
-            >Minimalism Jam</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/halloween-jam-2021"
-            target="_blank"
-            >Halloween Jam 2021</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/solo-dev-game-jam-4"
-            target="_blank"
-            >Solodev Jam #4</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/solo-dev-game-jam-5-spooky-jam"
-            target="_blank"
-            >Solodev Jam #5</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://itch.io/jam/solodevelopment-jam-6-winter-jam"
-            target="_blank"
-            >Solodev Jam #6</a
-          >
-        </li>
-      </ul>
+        <div class="jam-section">
+            <h2>72-hour Jams</h2>
+            <p>Perfect for weekend warriors and rapid prototyping:</p>
+            <ul class="jam-list">
+                <li><a href="https://itch.io/jam/winter-jam-by-solodevelopment" target="_blank">Winter Jam</a> - Cozy game development</li>
+                <li><a href="https://itch.io/jam/solodevelopment-game-jam" target="_blank">Minimalism Jam</a> - Less is more</li>
+                <li><a href="https://itch.io/jam/halloween-jam-2021" target="_blank">Halloween Jam 2021</a> - Spooky solo development</li>
+                <li><a href="https://itch.io/jam/solo-dev-game-jam-4" target="_blank">Solodev Jam #4</a> - The community favorite</li>
+                <li><a href="https://itch.io/jam/solo-dev-game-jam-5-spooky-jam" target="_blank">Solodev Jam #5</a> - Another spooky special</li>
+                <li><a href="https://itch.io/jam/solodevelopment-jam-6-winter-jam" target="_blank">Solodev Jam #6</a> - Winter wonderland</li>
+            </ul>
+        </div>
+    </main>
 
-      <!-- Community Links -->
-      <p>Join our growing community:</p>
-      <ul>
-        <li>
-          <a href="https://www.reddit.com/r/solodevelopment" target="_blank"
-            >Subreddit</a
-          >
-        </li>
-        <li>
-          <a href="https://discord.gg/4R5bB9nMSV" target="_blank">Discord</a>
-        </li>
-      </ul>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2024 SoloDevelopment.org — All rights reserved.</p>
-  </footer>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="https://discord.gg/4R5bB9nMSV">Discord Server</a></li>
+                    <li><a href="https://www.reddit.com/r/solodevelopment">Reddit</a></li>
+                    <li><a href="https://solodevelopment.itch.io">Itch.io</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="events.html">Game Jams</a></li>
+                    <li><a href="halloffame.html">Hall of Fame</a></li>
+                    <li><a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki">Wiki</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="https://practicalnpc.itch.io/">Managed by PracticalNPC</a></li>
+                    <li><a href="https://github.com/SoloDevelopmentCommunity">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 SoloDevelopment.org — Community-driven game development</p>
+        </div>
+    </footer>
 </body>
 </html>
