@@ -1,14 +1,14 @@
-/* style.css */
-
-/* Colors (using CSS variables) */
+/* Modern color scheme */
 :root {
-  --bg-color: #282328;       /* Site-wide background */
-  --text-color: #a3a29a;     /* Main text color */
-  --link-color: #dd4a4a;     /* Buttons and link backgrounds */
-  --header-foot-bg: #1f1f1f; /* Slightly darker for header/footer or boxes */
+  --bg-gradient-1: #1a1033;
+  --bg-gradient-2: #2d1b4e;
+  --accent-color: #9f6eff;
+  --text-color: #e4e4e7;
+  --card-bg: #2a2344;
+  --header-bg: #15112a;
 }
 
-/* Global Reset */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -16,149 +16,183 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-color);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--bg-gradient-1), var(--bg-gradient-2));
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
+  line-height: 1.6;
   min-height: 100vh;
 }
 
-/* Links */
-a {
-  color: #ffffff; /* White text on red button for contrast */
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-a:hover {
-  opacity: 0.9;
-}
-
-/* Header */
+/* Modern Header */
 header {
-  background: var(--header-foot-bg);
-  padding: 1rem;
-  text-align: center;
-}
-header h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
+  background: var(--header-bg);
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--accent-color), #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 1rem;
 }
+
 nav a {
-  background: var(--link-color);
+  color: var(--text-color);
+  text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Main Container */
-main {
-  flex: 1;
-  width: 100%;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+nav a:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
-  margin-bottom: 2rem;
-}
-.hero h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
+  padding: 4rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
 }
 
-/* Links in Hero */
-.hero-links {
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Feature Cards */
+.features {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-}
-.hero-links a {
-  background: var(--link-color);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-/* Info/Showcase Section */
-.info-section {
-  display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-.info-box {
-  background: var(--header-foot-bg);
-  border-radius: 4px;
-  width: 260px;
-  padding: 1rem;
-  text-align: center;
-}
-.info-box h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-.info-box p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
 }
 
 /* Footer */
 footer {
-  background: var(--header-foot-bg);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
-  color: #ffffff;
+  background: var(--header-bg);
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Content sections (e.g., events, halloffame) */
-.content {
-  margin-bottom: 2rem;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* Table Styling (for Hall of Fame, etc.) */
-.table-container {
-  overflow-x: auto; /* allow horizontal scroll on small screens */
-  margin-top: 1rem;
+.social-links {
+  display: flex;
+  gap: 1rem;
 }
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
+
+.social-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
-thead th {
-  background: #3a3a3a; /* Slightly darker header row */
-  color: #ffffff;
-}
-th, td {
-  padding: 0.75rem;
-  border: 1px solid #444;
-  vertical-align: top;
-}
-tbody tr:nth-child(even) {
-  background: #1f1f1f; /* Alternate row shading */
+
+.social-links a:hover {
+  opacity: 1;
 }
