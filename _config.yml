@@ -1,13 +1,19 @@
+# Site settings
 title: SoloDevelopment
 description: A community for solo game developers
-url: "https://solodevelopment.org"
+url: "https://solodevelopmentcommunity.github.io"
 baseurl: ""
 
+# Build settings
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
-  - .git/
+  - .git
