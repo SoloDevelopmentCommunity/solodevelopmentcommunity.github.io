@@ -1,95 +1,72 @@
 ---
 layout: default
 title: Home
+description: A community for solo game developers
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A community for solo game developers">
-    <title>SoloDevelopment - Home</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1 class="site-title">SoloDevelopment.org</h1>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/events/">Events</a></li>
-                    <li><a href="/hall-of-fame/">Hall of Fame</a></li>
-                    <li><a href="https://discord.gg/4R5bB9nMSV">Discord</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+{% include header.html %}
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Welcome, Solo Devs!</h2>
-                <p>Join our vibrant community of independent game developers. Share, learn, and grow as we tackle the challenges of making games alone—together!</p>
-                <div class="button-group">
-                    <a href="https://discord.gg/4R5bB9nMSV" class="button">Join Discord</a>
-                    <a href="https://www.reddit.com/r/solodevelopment" class="button">Join Subreddit</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Marathon Jams</h3>
-                    <p>Test your speed and creativity in our multi-day coding sprints. Show us what you can build under pressure!</p>
-                    <a href="events/" class="button">View Events</a>
-                </div>
-
-                <div class="card">
-                    <h3>Hall of Fame</h3>
-                    <p>Check out the top solo dev projects that have blown us away. Could yours be next?</p>
-                    <a href="hall-of-fame/" class="button">See Winners</a>
-                </div>
-
-                <div class="card">
-                    <h3>Community Wiki</h3>
-                    <p>Dive into resources, guides, and dev logs curated by our passionate community members.</p>
-                    <a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki" class="button">Browse Wiki</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Community</h4>
-                <ul>
-                    <li><a href="https://discord.gg/4R5bB9nMSV">Discord Server</a></li>
-                    <li><a href="https://www.reddit.com/r/solodevelopment">Reddit</a></li>
-                    <li><a href="https://solodevelopment.itch.io">Itch.io</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="events/">Game Jams</a></li>
-                    <li><a href="hall-of-fame/">Hall of Fame</a></li>
-                    <li><a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki">Wiki</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>About</h4>
-                <ul>
-                    <li><a href="https://practicalnpc.itch.io/">Managed by PracticalNPC</a></li>
-                    <li><a href="https://github.com/SoloDevelopmentCommunity">GitHub</a></li>
-                </ul>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome, Solo Devs!</h2>
+            <p>Join our vibrant community of independent game developers. Share, learn, and grow as we tackle the challenges of making games alone—together!</p>
+            <div class="button-group">
+                <a href="https://discord.gg/4R5bB9nMSV" class="button">Join Discord</a>
+                <a href="https://www.reddit.com/r/solodevelopment" class="button">Join Subreddit</a>
             </div>
         </div>
-        <div class="copyright">
-            <p>© 2024 SoloDevelopment.org — Community-driven game development</p>
+    </section>
+
+    <section class="features">
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Marathon Jams</h3>
+                <p>Test your speed and creativity in our multi-day coding sprints. Show us what you can build under pressure!</p>
+                <a href="{{ site.baseurl }}/events/" class="button">View Events</a>
+            </div>
+
+            <div class="card">
+                <h3>Hall of Fame</h3>
+                <p>Check out the top solo dev projects that have blown us away. Could yours be next?</p>
+                <a href="{{ site.baseurl }}/hall-of-fame/" class="button">See Winners</a>
+            </div>
+
+            <div class="card">
+                <h3>Community Wiki</h3>
+                <p>Dive into resources, guides, and dev logs curated by our passionate community members.</p>
+                <a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki" class="button">Browse Wiki</a>
+            </div>
         </div>
-    </footer>
-</body>
-</html>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Community</h4>
+            <ul>
+                <li><a href="https://discord.gg/4R5bB9nMSV">Discord Server</a></li>
+                <li><a href="https://www.reddit.com/r/solodevelopment">Reddit</a></li>
+                <li><a href="https://solodevelopment.itch.io">Itch.io</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="{{ site.baseurl }}/events/">Game Jams</a></li>
+                <li><a href="{{ site.baseurl }}/hall-of-fame/">Hall of Fame</a></li>
+                <li><a href="https://github.com/SoloDevelopmentCommunity/SoloDevelopment/wiki">Wiki</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>About</h4>
+            <ul>
+                <li><a href="https://practicalnpc.itch.io/">Managed by PracticalNPC</a></li>
+                <li><a href="https://github.com/SoloDevelopmentCommunity">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2024 SoloDevelopment.org — Community-driven game development</p>
+    </div>
+</footer>
