@@ -1,4 +1,13 @@
 title: SoloDevelopment
 description: A community for solo game developers
-url: "https://solodevelopmentcommunity.github.io"
+url: "https://solodevelopment.org"
 baseurl: ""
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
